@@ -21,7 +21,7 @@ module.exports = {
     library: process.env.NAME,
     libraryTarget: process.env.TARGET,
     path: __dirname,
-    filename: (PROD) ? 'build/ghost.min.js' : 'build/ghost.js'
+    filename: (PROD) ? `build/${process.env.NAME}.min.js` : `build/${process.env.NAME}.js`
   },
   module: {
     loaders: [
