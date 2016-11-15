@@ -28,12 +28,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ghostffcode/componentize-form.git"
+    "url": "git+https://github.com/ghostffcode/arrobj.git"
   },
   "author": "Chimeremeze Ukah <bliss@ghostffco.de>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ghostffcode/componentize-form/issues"
+    "url": "https://github.com/ghostffcode/arrobj/issues"
   },
-  "homepage": "https://github.com/ghostffcode/componentize-form#readme"
+  "homepage": "https://github.com/ghostffcode/arrobj#readme"
 }
