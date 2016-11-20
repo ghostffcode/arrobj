@@ -1,7 +1,7 @@
 {
-  "name": "componentize-form",
+  "name": "arrobj",
   "version": "1.0.0",
-  "description": "Scotch Tutorial code sample",
+  "description": "Array and Object handling",
   "main": "src/App.es6",
   "dependencies": {
     "dotenv": "^2.0.0",
