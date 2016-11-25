@@ -37,7 +37,7 @@ jspm_packages
 .node_repl_history
 
 # build directory
-build
+# build
 
 # test files
 test
