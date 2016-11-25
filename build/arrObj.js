@@ -63,11 +63,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+	
 	exports.isFlat = isFlat;
 	exports.isEqual = isEqual;
 	exports.isSame = isSame;
 	exports.Arr = Arr;
 	exports.toObj = toObj;
+	exports.isObj = isObj;
+	exports.toArr = toArr;
 	function isFlat(arr) {
 	  if (!this.Arr(arr)) {
 	    return false;
@@ -116,9 +121,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var keysLength = keys.length;
 	  var arrLength = arr.length;
 	
-	  arrLength < keysLength ? console.log("val < keys") : '';
-	  arrLength > keysLength ? console.log("val > keys: using indexes instead") : '';
-	
 	  var callback = function callback(val, i) {
 	    keys[i] !== undefined ? res[keys[i]] = val : res[i] = val;
 	  };
@@ -129,6 +131,36 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  }
 	  arr.forEach(callback);
+	
+	  return res;
+	};
+	
+	/*
+	********************** Conversion and checks from Objects starts here **************************
+	*/
+	
+	function isObj(obj) {
+	  if (obj === null || (typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) !== 'object' || this.Arr(obj)) {
+	    return false;
+	  }
+	  return true;
+	};
+	
+	function toArr(obj) {
+	  var res = [];
+	  if (!this.isObj(obj)) {
+	    return res;
+	  }
+	
+	  for (var key in obj) {
+	    if (obj.hasOwnProperty(key)) {
+	      if (this.isObj(obj[key])) {
+	        res.push(this.toArr(obj[key]));
+	      } else {
+	        res.push(obj[key]);
+	      }
+	    }
+	  }
 	
 	  return res;
 	};

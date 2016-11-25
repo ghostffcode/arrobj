@@ -49,9 +49,6 @@ export function toObj (arr, keys = null) {
   let keysLength = keys.length;
   let arrLength = arr.length;
 
-  (arrLength < keysLength) ? console.log("val < keys") : '';
-  (arrLength > keysLength) ? console.log("val > keys: using indexes instead") : '';
-
   let callback = function (val, i) {
     (keys[i] !== undefined) ? res[keys[i]] = val : res[i] = val;
   };
@@ -66,5 +63,35 @@ export function toObj (arr, keys = null) {
   return res;
 };
 
+/*
+********************** Conversion and checks from Objects starts here **************************
+*/
+
+export function isObj (obj) {
+  if (obj === null || (typeof obj !== 'object') || this.Arr(obj)) {
+    return false;
+  }
+  return true;
+};
+
+
+export function toArr (obj) {
+  let res = [];
+  if (!this.isObj(obj)) {
+    return res;
+  }
+
+  for (var key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      if (this.isObj(obj[key])) {
+        res.push(this.toArr(obj[key]));
+      } else {
+        res.push(obj[key]);
+      }
+    }
+  }
+
+  return res;
+};
 
 console.log('arrObj Loaded!');

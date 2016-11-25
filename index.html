@@ -7,7 +7,14 @@
   <body>
     <script src="./build/arrObj.js" charset="utf-8"></script>
     <script type="text/javascript">
-      console.log(arrObj.toObj(["Bliss", 21, "shoki"], ["name", "age", "dance"]));
+      // console.log(arrObj.toArr(["Bliss", "21", "shoki", ["2"]], ["Bliss", "21", "shoki", ["2"]]));
+      console.log(arrObj.toArr({
+        name: "Bliss",
+        detail: {
+          age: 24,
+          sports: "soccer"
+        }
+      }));
     </script>
   </body>
 </html>
