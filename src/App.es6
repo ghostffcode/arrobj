@@ -36,11 +36,11 @@ export function Arr(arr) {
   return Array.isArray(arr);
 }
 
-export function toObj (arr, keys = null) {
+export function toObj (arr, keys = []) {
   let res = {};
 
   // is keys array null?
-  let keysVal = (keys === null);
+  let keysVal = (keys === []);
 
   if (!this.Arr(arr) || (!keysVal && !this.Arr(keys))) {
     return res;
