@@ -39,7 +39,7 @@ export function Arr(arr) {
 export function toObj (arr, keys = []) {
   let res = {};
 
-  // is keys array null?
+  // is keys array empty?
   let keysVal = (keys === []);
 
   if (!this.Arr(arr) || (!keysVal && !this.Arr(keys))) {

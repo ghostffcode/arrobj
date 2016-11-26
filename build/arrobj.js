@@ -111,7 +111,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  var res = {};
 	
-	  // is keys array null?
+	  // is keys array empty?
 	  var keysVal = keys === [];
 	
 	  if (!this.Arr(arr) || !keysVal && !this.Arr(keys)) {
