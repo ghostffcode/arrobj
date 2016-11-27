@@ -1,8 +1,9 @@
 {
   "name": "arrobj",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Array and Object handling",
-  "main": "src/App.es6",
+  "main": "build/arrobj.min.js",
+  "source": "src/App.es6",
   "dependencies": {
     "dotenv": "^2.0.0",
     "webpack": "^1.13.2",
