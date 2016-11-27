@@ -1,0 +1,26 @@
+{
+  "name": "arrobj",
+  "description": "Array and object handling in Javascript",
+  "main": "build/arrobj.min.js",
+  "authors": [
+    "Chimeremeze Ukah <bliss@ghostffco.de>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "array",
+    "conversion",
+    "object",
+    "conversion",
+    "array",
+    "to",
+    "object"
+  ],
+  "homepage": "https://github.com/ghostffcode/arrobj",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
