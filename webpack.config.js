@@ -15,7 +15,7 @@ PROD ? [
   ] : '';
 
 module.exports = {
-  entry: path.resolve(__dirname, config.main),
+  entry: path.resolve(__dirname, config.source),
   devtool: 'source-map',
   output: {
     library: process.env.NAME,
