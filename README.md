@@ -16,7 +16,7 @@ bower install arrobj
 - In node:
 ```javascript
 // vanilla javascript
-const _ = require("arrobj");
+const arrobj = require("arrobj");
 // es6 syntax
 import * as arrobj from "arrobj";
 ```
